@@ -1,0 +1,3 @@
+bottle
+python-mpd2
+python-decouple
