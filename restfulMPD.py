@@ -33,6 +33,16 @@ def play(client):
     return 'OK'
 
 
+@route('/pause', method='POST')
+@client
+def pause(client):
+    if client.status()['state'] == 'play':
+        client.pause(1)
+    else:
+        client.pause(0)
+    return 'OK'
+
+
 @route('/stop', method='POST')
 @client
 def stop(client):
